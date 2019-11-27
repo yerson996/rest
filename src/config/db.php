@@ -1,10 +1,10 @@
 <?php
     class db{
         // Properties
-        private $dbhost = 'localhost';
-        private $dbuser = 'root';
-        private $dbpass = '123456';
-        private $dbname = 'slimapp';
+        private $dbhost = 'remotemysql.com';
+        private $dbuser = 'y64MtsQZL5';
+        private $dbpass = 'ASbmFQRbdB';
+        private $dbname = 'y64MtsQZL5';
 
         // Connect
         public function connect(){
