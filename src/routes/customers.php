@@ -18,7 +18,7 @@ $app->add(function ($req, $res, $next) {
 
 // Get All Customers
 $app->get('/api/customers', function(Request $request, Response $response){
-    $sql = "SELECT * FROM customers";
+    $sql = "SELECT * FROM campañas";
 
     try{
         // Get DB Object
@@ -39,7 +39,7 @@ $app->get('/api/customers', function(Request $request, Response $response){
 $app->get('/api/customer/{id}', function(Request $request, Response $response){
     $id = $request->getAttribute('id');
 
-    $sql = "SELECT * FROM customers WHERE id = $id";
+    $sql = "SELECT * FROM campañas WHERE id = $id";
 
     try{
         // Get DB Object
@@ -66,7 +66,7 @@ $app->post('/api/customer/add', function(Request $request, Response $response){
     $city = $request->getParam('city');
     $state = $request->getParam('state');
 
-    $sql = "INSERT INTO customers (first_name,last_name,phone,email,address,city,state) VALUES
+    $sql = "INSERT INTO campañas (first_name,last_name,phone,email,address,city,state) VALUES
     (:first_name,:last_name,:phone,:email,:address,:city,:state)";
 
     try{
@@ -105,7 +105,7 @@ $app->put('/api/customer/update/{id}', function(Request $request, Response $resp
     $city = $request->getParam('city');
     $state = $request->getParam('state');
 
-    $sql = "UPDATE customers SET
+    $sql = "UPDATE campañas SET
 				first_name 	= :first_name,
 				last_name 	= :last_name,
                 phone		= :phone,
@@ -144,7 +144,7 @@ $app->put('/api/customer/update/{id}', function(Request $request, Response $resp
 $app->delete('/api/customer/delete/{id}', function(Request $request, Response $response){
     $id = $request->getAttribute('id');
 
-    $sql = "DELETE FROM customers WHERE id = $id";
+    $sql = "DELETE FROM campañas WHERE id = $id";
 
     try{
         // Get DB Object
