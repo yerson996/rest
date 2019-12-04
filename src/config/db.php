@@ -1,10 +1,10 @@
 <?php
     class db{
         // Properties
-        private $dbhost = 'remotemysql.com';
-        private $dbuser = 'y64MtsQZL5';
-        private $dbpass = 'ASbmFQRbdB';
-        private $dbname = 'y64MtsQZL5';
+        private $dbhost = 'ingenierosdelaweb.com';
+        private $dbuser = 'ingenierosdelawe_root';
+        private $dbpass = 'developer96';
+        private $dbname = 'ingenierosdelawe_apprest';
 
         // Connect
         public function connect(){
